@@ -20,7 +20,8 @@ const nombreHabitants=async () =>{
             // createNouveauLi.textContent=response[i].nom;
             let textNode=document.createTextNode(nomVille+" "+nombrePopulation+" habitants");
             createNouveauLi.appendChild(textNode);
-            createNouveauLi.style.color="white";
+            createNouveauLi.style.fontSize="calc(15px + 1vw)";
+            createNouveauUl.style.marginBottom="20px"
             
          }
         // let nomVille=response.nom;

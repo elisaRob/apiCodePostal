@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lobster&family=Satisfy&display=swap');
+
 :root{
-    --premierCouleur:white;
-    --deuxiemeCouleur:black;
+   
+    --premierCouleur:black;
+    --tailleTitre:calc(25px + 2vw)
 }
 
 *{
@@ -9,33 +12,69 @@
     box-sizing:border-box;
 }
 
+
 body{
     height:100vh;
-    display:flex;
-    justify-content: center;
+    width:100vw;
+    overflow-x:hidden;
+
   
-    background-color:#222;
+   
+}
+
+header{
+    background-image:url(img/ville.jpg);
+    width: 100%;
+    background-repeat:no-repeat;
+    height:50vh;
+    background-size:cover;
+  
+    /* background-position:-100% center; */
+    animation-name:backgroundQuiBouge;
+    animation-duration:12s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    
+}
+
+@keyframes backgroundQuiBouge{
+    0%{
+        background-position:-100% center;
+        background-size:cover;
+      
+    }
+
+    100%{
+        background-position: 100% center;
+        background-size:cover;
+    }
 }
 
 form{
     margin-top:50px;
     display:flex;
     flex-direction:column;
+    width:100%;
+    align-items:center
 }
 
-.codePostal{
+/* .codePostal{
     color:var(--deuxiemeCouleur)
-}
+} */
 
 input:focus{
     outline:none;
     background-color:bisque;
-    color:var(--deuxiemeCouleur)
+ 
 }
 
 
 label,input{
-    color:var(--premierCouleur);
+   
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Satisfy', cursive;
+    font-size:var(--tailleTitre);
     margin-bottom:5px;
 }
 
